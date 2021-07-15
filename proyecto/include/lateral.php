@@ -11,15 +11,15 @@
             </div>
             <div id="register" class="bloque">
                 <h3> Registrate </h3>
-                    <form action="#" method="POST">
+                <form action="./action/registro.php" method="POST">
                         <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" placeholder="Ingrese el nombre" required="required">
+                        <input type="text" name="nombre" placeholder="Ingrese el nombre">
                         <label for="apellidos">Apellidos</label>
-                        <input type="text" name="apellidos" placeholder="Ingrese los apellidos" required="required">
+                        <input type="text" name="apellidos" placeholder="Ingrese los apellidos">
                         <label for="email">Correo</label>
                         <input type="email" name="email" placeholder="ejemplo@dominio.com">
                         <label for="password">Constraseña</label>
-                        <input type="password" name="password" required="required">
+                        <input type="password" name="password">
                         <input type="submit" value="Registrar">
                     </form>
                

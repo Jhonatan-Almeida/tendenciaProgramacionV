@@ -1,3 +1,4 @@
+<?php include 'canexion.php';?>
 <html>
     <head>
         <title>Tendencia Programación BLOG Proyecto</title>
