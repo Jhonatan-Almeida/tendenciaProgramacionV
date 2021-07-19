@@ -6,7 +6,11 @@ if(isset($_POST)){
          session_start();
      }
 
-
+//if(isset($_POST['nombre'])){
+//    $nomgre= $_POST['nombre'];
+//}else{
+//    $nombre = false;
+//}
 $nombre = isset($_POST['nombre']) ? $_POST['nombre']:false;
 $apellido = isset($_POST['apellidos']) ? $_POST['apellidos']:false;
 $email = isset($_POST['email']) ? $_POST['email']:false;

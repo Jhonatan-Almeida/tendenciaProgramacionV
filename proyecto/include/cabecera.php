@@ -2,7 +2,7 @@
 session_start();
 ?>
 <?php require_once 'conexion.php'; ?>
-<?php //require_once 'includes/funciones.php'; ?>
+<?php require_once 'include/funcionestd.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
