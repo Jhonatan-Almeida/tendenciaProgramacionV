@@ -1,10 +1,15 @@
-<?php include 'canexion.php';?>
+<?php
+session_start();
+?>
+<?php require_once 'conexion.php'; ?>
+<?php //require_once 'includes/funciones.php'; ?>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Tendencia Programación BLOG Proyecto</title>
+        <title>Mejorando Interface</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" media="screen" type="text/css" href="./assets/css/style.css">
+        <link rel="stylesheet" media="screen" type="text/css" href="./assets/css/styletd.css">
     </head>
     <body>
         <header id="cabecera">
@@ -22,6 +27,6 @@
                     <li><a href="#">Cerrar</a></li>
                 </ul>
             </nav>
-            
+            <div class="limpiarFlotantes"></div>
         </header>
         <div id="contenedor">

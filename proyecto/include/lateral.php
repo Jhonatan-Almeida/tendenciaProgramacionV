@@ -9,8 +9,18 @@
                         <input type="submit" value="Enviar">
                     </form>
             </div>
+       
             <div id="register" class="bloque">
                 <h3> Registrate </h3>
+                <?php  if(isset($_SESSION['completado'])): ?>
+                <div class="alerta alerta-exito">
+                    <?= ($_SESSION['completado']); ?>
+                </div>
+                <?php  elseif(isset($_SESSION['errores'])): ?>
+                <div class="alerta alerta-error">
+                    <?= var_dump(($_SESSION['errores'])); ?>
+                </div>
+                <?php endif; ?>
                 <form action="./action/registro.php" method="POST">
                         <label for="nombre">Nombre</label>
                         <input type="text" name="nombre" placeholder="Ingrese el nombre">

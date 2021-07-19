@@ -6,8 +6,8 @@
  * and open the template in the editor.
  */
 //include include_once require, require_once
-include './include/cabecera.php';
-include './include/lateral.php';
+require_once "./include/cabecera.php"; 
+require_once './include/lateral.php';
 ?>
          
             <div id="principal">
