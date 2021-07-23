@@ -21,9 +21,16 @@ session_start();
             <nav id="menu">
                 <ul>
                     <li><a href="index.php">Inicio</a></li>
-                    <li><a href="#">Animales</a></li>
-                    <li><a href="#">Medicina</a></li>
-                    <li><a href="#">Motos</a></li>
+                    <?php 
+                    $categorias = conseguirCategoria($db);
+                    if (!empty($categorias)):
+                        while ($categoria = mysqli_fetch_assoc($categorias)):  // mysql_fetch_assoc nos sive para hacer un arreglo asociativo
+                        ?>
+                    <li><a href="categoria.php?id =<?= $categoria['id']; ?>"><?= $categoria['nombre'];?> </a></li>
+                        <?php
+                        endwhile;
+                    endif;
+                    ?>
                     <li><a href="#">Cerrar</a></li>
                 </ul>
             </nav>

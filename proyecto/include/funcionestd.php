@@ -18,6 +18,19 @@ function borrarErrores(){
         $_SESSION['completado']=null;
         $borrado = true;
     }
+    if (isset($_SESSION['error_login'])){
+        $_SESSION['error_login']=null;
+        $borrado = true;
+    }
+}
+function conseguirCategoria($conexion){
+    $sql = "select * from categorias order by id ASC";
+    $categorias=  mysqli_query($conexion, $sql);
+    $resultado = array();
+    if($categorias && mysqli_num_rows($categorias)>=1){
+        $resultado = $categorias;
+    }
+    return $resultado;
 }
 
 /* 
