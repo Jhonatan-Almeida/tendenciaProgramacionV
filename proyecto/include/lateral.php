@@ -2,8 +2,8 @@
        <?php if(isset($_SESSION['usuario'])): ?>
             <div id="usuario_logeado" class="bloque">
                 <h3>Bienvenido <?= $_SESSION['usuario']['nombre'].' '.$_SESSION['usuario']['apellidos'] ?></h3>
-                <a href="#" class="boton boton-verde">Crear Entrada</a>
-                <a href="#" class="boton boton-naranja">Crear Categoria</a>
+                <a href="crear-entrada.php" class="boton boton-verde">Crear Entrada</a>
+                <a href="crear-categoria.php" class="boton boton-naranja">Crear Categoria</a>
                 <a href="#" class="boton boton-verde">Mis datos</a>
                 <a href="./action/cerrar.php" class="boton boton-rojo">Cerrar</a>
             </div>  
@@ -31,9 +31,9 @@
                 <div class="alerta alerta-exito">
                     <?= ($_SESSION['completado']); ?>
                 </div>
-                <?php  elseif(isset($_SESSION['errores']['general'])): ?>
+                <?php  elseif(isset($_SESSION['errores']['nombre'])): ?>
                 <div class="alerta alerta-error">
-                    <?= var_dump(($_SESSION['errores']['general'])); ?>
+                    <?= ($_SESSION['errores']['nombre']); ?>
                 </div>
                 <?php endif; ?>
                 <form action="./action/registro.php" method="POST">

@@ -22,6 +22,14 @@ function borrarErrores(){
         $_SESSION['error_login']=null;
         $borrado = true;
     }
+    if (isset($_SESSION['completo_categoria'])){
+        $_SESSION['completo_categoria']=null;
+        $borrado = true;
+    }
+    if (isset($_SESSION['error_login'])){
+        $_SESSION['error_login']=null;
+        $borrado = true;
+    }
 }
 function conseguirCategoria($conexion){
     $sql = "select * from categorias order by id ASC";
@@ -32,7 +40,15 @@ function conseguirCategoria($conexion){
     }
     return $resultado;
 }
-
+function conseguirCategorias($conexion){
+    $sql = "select * from categorias";
+    $categorias=  mysqli_query($conexion, $sql);
+    $resultado = array();
+    if($categorias && mysqli_num_rows($categorias)>=1){
+        $resultado = $categorias;
+    }
+    return $resultado;
+}
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
